@@ -1,0 +1,34 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="css/examples.css" />
+        <link rel="stylesheet" href="https://pyscript.net/releases/2025.5.1/core.css">
+        <script type="module" src="https://pyscript.net/releases/2025.5.1/core.js"></script>
+        <title>Document</title>
+    </head>
+
+    <body>
+        <section class="pyscript">
+            <div class="container">
+                Hello world! <br />
+                This is the current date and time, as computed by Python:
+                <h1>Testowa Aplication</h1>
+                <input class="my_input" type="" name="" placeholder="Enter height" />
+                <h1 class='messenge'>0</h1>
+                <button id="foo" py-click="handler_defined_in_python">Click me</button>   
+                <button id="foo1" py-click="connect_requests">Requests</button> 
+                <button id="foo2" py-click="create_database">Create database</button> 
+                <button class="Btn"id="foo3" py-click="read_file">Read file</button>
+                <button class="button"id="foo4" py-click="update_file">Update</button>
+                <h3 class="connect">Connect reguests</h3>
+            </div>
+        </section>
+        <script type="py" src="./main.py" config="./pyscript.json"></script>   
+        <script>
+            
+        </script>
+    </body>
+</html>

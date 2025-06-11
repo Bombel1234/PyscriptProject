@@ -1,0 +1,11 @@
+
+{
+    "packages": [
+        "matplotlib",
+         "requests"
+        ],
+    "files": {
+    
+    "./main.json": "./subdir/main.json"
+  }
+}
