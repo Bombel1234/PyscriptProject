@@ -6,6 +6,6 @@
         ],
     "files": {
     
-    "./main.json": "./subdir/main.json"
+    "./main.json": "main.json"
   }
 }
