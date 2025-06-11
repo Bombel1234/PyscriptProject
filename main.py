@@ -56,23 +56,23 @@ def read_file(event):
     with open("main.json", 'r') as file:
         content = json.load(file)
         connect.innerText = content['name']
-    # try:
-    #     with open("subdir/main.json", 'r') as file:
-    #         content = json.load(file)
-    #         connect.innerText = content['name']
-    # except FileNotFoundError:
-    #     connect.innerText = "Database file not found."
-    # except Exception as e:
-    #     connect.innerText = f"An error occurred: {e}"
+    try:
+        with open("main.json", 'r') as file:
+            content = json.load(file)
+            connect.innerText = content['name']
+    except FileNotFoundError:
+        connect.innerText = "Database file not found."
+    except Exception as e:
+        connect.innerText = f"An error occurred: {e}"
         
 def update_file(event):
     messenge = my_input.value
     try:
-        with open("subdir/main.json", 'r') as file:
+        with open("main.json", 'r') as file:
             content = json.load(file)
         content['name'] = messenge
         json_str = json.dumps(content, indent=4)
-        with open("subdir/main.json", 'w') as file:
+        with open("main.json", 'w') as file:
             file.write(json_str)
         connect.innerText = "File updated successfully."
     except FileNotFoundError:
