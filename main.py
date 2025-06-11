@@ -49,7 +49,7 @@ def connect_requests(events):
         pass
         
 def create_database(event):
-    path =  f"{os.getcwd()}/subdir"
+    path =  f"{os.getcwd()}"
     connect.innerText = os.listdir(path)
     
 def read_file(event):
