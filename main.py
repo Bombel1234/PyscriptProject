@@ -4,17 +4,6 @@ import requests
 import os
 import json
 
-# from js import alert
-
-
-
-
-
-
-
-DB_FILE = "/home/web_user/my_persistent_db.sqlite"
-conn = None
-
 
 my_element = document.querySelector(".messenge")
 my_input = document.querySelector(".my_input")
@@ -64,14 +53,17 @@ def create_database(event):
     connect.innerText = os.listdir(path)
     
 def read_file(event):
-    try:
-        with open("subdir/main.json", 'r') as file:
-            content = json.load(file)
-            connect.innerText = content['name']
-    except FileNotFoundError:
-        connect.innerText = "Database file not found."
-    except Exception as e:
-        connect.innerText = f"An error occurred: {e}"
+    with open("main.json", 'r') as file:
+        content = json.load(file)
+        connect.innerText = content['name']
+    # try:
+    #     with open("subdir/main.json", 'r') as file:
+    #         content = json.load(file)
+    #         connect.innerText = content['name']
+    # except FileNotFoundError:
+    #     connect.innerText = "Database file not found."
+    # except Exception as e:
+    #     connect.innerText = f"An error occurred: {e}"
         
 def update_file(event):
     messenge = my_input.value
